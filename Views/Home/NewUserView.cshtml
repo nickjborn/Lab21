@@ -1,0 +1,26 @@
+﻿@model RegistrationViewModel
+
+@{
+    ViewData["Title"] = "NewUserView";
+}
+
+
+@try
+{
+    <h2>Thanks for registering, @Model.FirstName!</h2>
+    <h3>We've got a fresh @Model.FavoriteCoffee brewing just for you.</h3>
+    @if (Model.DoSendEmails)
+    {
+        <h3>We'll be sending you email offers.</h3>
+    }
+    else
+    {
+        <h3>We won't be emailing you.</h3>
+    }
+}
+catch
+{
+    <h3>Something went wrong in the registration, go back and try again.</h3>
+}
+
+

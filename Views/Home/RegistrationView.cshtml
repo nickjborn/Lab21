@@ -1,0 +1,40 @@
+﻿@model  RegistrationViewModel
+@{
+    ViewData["Title"] = "RegistrationView";
+}
+
+<h1>Registration</h1>
+
+<form asp-controller="Home" asp-action="NewUserView" method="post">
+    <label>First Name</label> <br />
+    <input asp-for="FirstName" /> <br />
+
+    <label>Last Name</label> <br />
+    <input asp-for="LastName" /> <br />
+
+    <label>Email Address</label> <br />
+    <input asp-for="Email" /> <br />
+
+    <label>Do you want to recieve emails?</label><br />
+    <input type="radio" asp-for="DoSendEmails" value="true" checked/>Yes! Send me the emails.<br />
+    <input type="radio" asp-for="DoSendEmails" value="false" />No thanks.<br />
+
+    <label>Phone Number</label> <br />
+    <input asp-for="Phone" /> <br />
+
+    <label>Password</label> <br />
+    <input type="password" asp-for="Password" /> <br />
+
+    <label>What's your favorite kind of coffee?</label> <br />
+    <select asp-for="FavoriteCoffee">
+        <option value="regular black coffee">Regular black</option>
+        <option value="latte">Latte</option>
+        <option value="frapamachinocarmeleeto">Frapamachinocarmeleeto</option>
+        <option value="americano">Americano</option>
+    </select>
+
+
+    <button>Submit</button> <br />
+
+</form>
+
